@@ -20,5 +20,13 @@
   "bugs": {
     "url": "https://github.com/PhilipDro/philip/issues"
   },
-  "homepage": "https://github.com/PhilipDro/philip#readme"
+  "homepage": "https://github.com/PhilipDro/philip#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.4.0",
+    "gulp-coffee": "^3.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-dest": "^0.2.3",
+    "gulp-sass": "^3.1.0"
+  }
 }
