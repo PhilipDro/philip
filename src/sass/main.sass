@@ -1,11 +1,86 @@
 @import "neat/neat"
+@import "variables"
 
-// $neat-grid:
-//   columns: 12,
-//   gutter: 20px,
-// ;
-
+// general elements
 body
+  margin: 0
+  font-family: $font-family-standard
+  color: $text-color
+h2
+  margin-top: 2em
+a
+  text-decoration: none
+  color: $text-color
+.container
+  // width: 80%
+  margin: 0 4vw
+.col
+  @include grid-column(6)
+
+// header
+header
+  height: 100vh
+  background: $clouds
+  border-bottom: 1px solid darken($clouds, 10%)
+  position: relative
+  a.button
+    position: absolute
+    bottom: 5vh
+    right: 2vw
+    background: transparent
+    border: 4px solid $text-color
+    padding: 0.8em 1.2em
+    color: $text-color
+    font-size: 1.4em
+    cursor: pointer
+    font-weight: bold
+    text-decoration: none
+    &:hover
+      color: #9b59b6
+      border: 4px solid #9b59b6
+      transition: border .4s, color .4s
+  .heading
+    margin-top: 3.7em
+    margin-bottom: 0
+    font-size: 3em
+  .subheading
+    font-size: 2em
+    margin: 0 0 .4em 0
+  a.sub-links
+    margin-right: 1em
+    svg
+      padding-right: 0.3em
+  .header-image
+    width: 48vw
+    background: $grey
+    height: 100vh
+    float: right
+    display: inline-block
+
+// navigation
+nav
+  ul
+    padding: 0
+    li
+      list-style-type: none
+      display: inline
+      padding: 0 .5em
+      a
+        text-transform: uppercase
+        text-decoration: none
+        color: $text-color
+        font-size: 0.9em
+
+// project section
+.project-section
+  article
+    margin: 7vh 0
+  img
+    width: 100%
+    border: 1px solid $text-color
 
 .half-column
-  @include grid-column(6)
+  width: 50vw
+  height: 100vh
+  position: relative
+  display: inline-block

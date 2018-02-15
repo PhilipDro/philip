@@ -28,13 +28,18 @@ gulp.task('concat', function() {
     .pipe(gulp.dest('./target/js/'));
 });
 
+gulp.task('copy', function() {
+  gulp.src(['src/**.*'])
+   .pipe(dest('target/'))
+   .pipe(gulp.dest('./'));
+   gulp.src(['src/images/**.*'])
+    .pipe(dest('target/images/'))
+    .pipe(gulp.dest('./'));
+});
+
 
 gulp.task('default', function() {
-  // sass();
-  // coffee();
-  // concat();
-  gulp.src(['src/index.html'])
-   .pipe(dest('target/'))
-   .pipe(gulp.dest('./'))
-  gulp.watch('./src/**/*.*', ['default', 'sass', 'coffee', 'concat']);
+  gulp.watch('./src/**/*.*', ['copy', 'sass',
+  //'coffee',
+   'concat']);
 });
