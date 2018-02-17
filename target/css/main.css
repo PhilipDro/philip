@@ -4,8 +4,7 @@ body {
   color: #383838; }
 
 h2 {
-  margin-top: 2em;
-  margin-left: 20px; }
+  margin-top: 2em; }
 
 a {
   text-decoration: none;
@@ -110,7 +109,8 @@ header {
   text-align: center; }
 
 .img-smaller {
-  width: 75%; }
+  width: 75%;
+  border: 1px solid #c0cdd1; }
 
 .half-width-text {
   width: 40vw; }
@@ -124,6 +124,15 @@ header {
   border: 1px solid #c0cdd1;
   margin: 2vw; }
   .images-in-row img.big {
+    width: 64vw; }
+
+.images-in-row-full-height img {
+  display: inline-block;
+  width: auto;
+  height: 70vh;
+  border: 1px solid #c0cdd1;
+  margin: 2vw; }
+  .images-in-row-full-height img.big {
     width: 64vw; }
 
 .margin {

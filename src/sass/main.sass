@@ -9,7 +9,7 @@ body
 h2
   margin-top: 2em
   // to comply with neat column
-  margin-left: 20px
+  // margin-left: 20px
 a
   text-decoration: none
   color: $text-color
@@ -105,6 +105,7 @@ header
   text-align: center
 .img-smaller
   width: 75%
+  border: 1px solid darken($clouds, 20%)
 .half-width-text
   width: 40vw
   @media(max-width: $smartphone-max)
@@ -113,6 +114,15 @@ header
   img
     display: inline-block
     width: 30vw
+    border: 1px solid darken($clouds, 20%)
+    margin: 2vw
+    &.big
+      width: 64vw
+.images-in-row-full-height
+  img
+    display: inline-block
+    width: auto
+    height: 70vh
     border: 1px solid darken($clouds, 20%)
     margin: 2vw
     &.big
