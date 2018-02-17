@@ -10,6 +10,10 @@ a {
   text-decoration: none;
   color: #383838; }
 
+img {
+  width: 100%;
+  height: auto; }
+
 .container {
   margin: 0 4vw; }
 
@@ -17,12 +21,33 @@ a {
   width: calc(50% - 30px);
   float: left;
   margin-left: 20px; }
+  @media (max-width: 420px) {
+    .col {
+      width: calc(100% - 40px);
+      float: left;
+      margin-left: 20px; } }
+
+.border {
+  border: 1px solid #dde4e6; }
+
+.lone-standing {
+  margin: 13vh 0; }
+  .lone-standing h2 {
+    margin-top: 0; }
 
 header {
   height: 100vh;
   background: #fbfcfc;
   border-bottom: 1px solid #dde4e6;
   position: relative; }
+  header .header-col {
+    width: 50vw;
+    height: 100vh;
+    position: relative;
+    display: inline-block; }
+    @media (max-width: 420px) {
+      header .header-col {
+        width: 100vw; } }
   header a.button {
     position: absolute;
     bottom: 5vh;
@@ -39,9 +64,12 @@ header {
       color: #9b59b6;
       border: 4px solid #9b59b6;
       transition: border .4s, color .4s; }
+  header .heading-box {
+    margin-top: 20vh; }
+  header .meta-info {
+    margin-bottom: 0.4em; }
   header .heading {
-    margin-top: 3.7em;
-    margin-bottom: 0;
+    margin: 0 auto;
     font-size: 3em; }
   header .subheading {
     font-size: 2em;
@@ -52,10 +80,38 @@ header {
       padding-right: 0.3em; }
   header .header-image {
     width: 48vw;
-    background: #95a5a6;
     height: 100vh;
     float: right;
     display: inline-block; }
+    @media (max-width: 420px) {
+      header .header-image {
+        width: 100vw; } }
+    header .header-image.home {
+      background: #95a5a6; }
+    header .header-image img {
+      float: right;
+      height: 100%;
+      width: auto; }
+
+.center-content {
+  text-align: center; }
+
+.img-smaller {
+  width: 75%; }
+
+.half-width-text {
+  width: 40vw; }
+  @media (max-width: 420px) {
+    .half-width-text {
+      width: 100vw; } }
+
+.images-in-row img {
+  display: inline-block;
+  width: 30vw;
+  border: 1px solid #c0cdd1;
+  margin: 2vw; }
+  .images-in-row img.big {
+    width: 64vw; }
 
 nav ul {
   padding: 0; }
@@ -68,16 +124,14 @@ nav ul {
       text-decoration: none;
       color: #383838;
       font-size: 0.9em; }
+      nav ul li a.active {
+        text-decoration: underline; }
 
 .project-section article {
   margin: 7vh 0; }
+  @media (max-width: 420px) {
+    .project-section article {
+      margin: 0; } }
 
 .project-section img {
-  width: 100%;
-  border: 1px solid #383838; }
-
-.half-column {
-  width: 50vw;
-  height: 100vh;
-  position: relative;
-  display: inline-block; }
+  border: 1px solid #ebebeb; }
