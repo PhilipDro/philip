@@ -4,7 +4,8 @@ body {
   color: #383838; }
 
 h2 {
-  margin-top: 2em; }
+  margin-top: 2em;
+  margin-left: 20px; }
 
 a {
   text-decoration: none;
@@ -35,6 +36,34 @@ img {
   .lone-standing h2 {
     margin-top: 0; }
 
+.button, .button-header {
+  background: transparent;
+  border: 2px solid #383838;
+  padding: 0.5em 0.9em;
+  color: #383838;
+  font-size: 1.1em;
+  cursor: pointer;
+  text-decoration: none;
+  margin-top: 2vh; }
+  .button:hover, .button-header:hover {
+    color: #9b59b6;
+    border: 2px solid #9b59b6;
+    transition: border .4s, color .4s; }
+
+.button-header {
+  margin-top: 0;
+  position: absolute;
+  bottom: 5vh;
+  right: 2vw;
+  border: 4px solid #383838;
+  padding: 0.8em 1.2em;
+  font-size: 1.4em;
+  font-weight: bold; }
+  .button-header:hover {
+    color: #9b59b6;
+    border: 4px solid #9b59b6;
+    transition: border .4s, color .4s; }
+
 header {
   height: 100vh;
   background: #fbfcfc;
@@ -48,22 +77,6 @@ header {
     @media (max-width: 420px) {
       header .header-col {
         width: 100vw; } }
-  header a.button {
-    position: absolute;
-    bottom: 5vh;
-    right: 2vw;
-    background: transparent;
-    border: 4px solid #383838;
-    padding: 0.8em 1.2em;
-    color: #383838;
-    font-size: 1.4em;
-    cursor: pointer;
-    font-weight: bold;
-    text-decoration: none; }
-    header a.button:hover {
-      color: #9b59b6;
-      border: 4px solid #9b59b6;
-      transition: border .4s, color .4s; }
   header .heading-box {
     margin-top: 20vh; }
   header .meta-info {
@@ -113,6 +126,9 @@ header {
   .images-in-row img.big {
     width: 64vw; }
 
+.margin {
+  margin: 2vw; }
+
 nav ul {
   padding: 0; }
   nav ul li {
@@ -128,7 +144,8 @@ nav ul {
         text-decoration: underline; }
 
 .project-section article {
-  margin: 7vh 0; }
+  margin-top: 7vh;
+  margin-bottom: 7vh; }
   @media (max-width: 420px) {
     .project-section article {
       margin: 0; } }
