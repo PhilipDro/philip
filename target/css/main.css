@@ -63,6 +63,9 @@ img {
     border: 4px solid #9b59b6;
     transition: border .4s, color .4s; }
 
+.offset {
+  margin-left: 20px; }
+
 header {
   height: 100vh;
   background: #fbfcfc;

@@ -32,7 +32,7 @@ gulp.task('copy', ['clean'], function() {
   gulp.src(['src/**.*'])
    .pipe(dest('target/'))
    .pipe(gulp.dest('./'));
-   gulp.src(['src/images/**.*'])
+   gulp.src(['src/images/**/**.*'])
     .pipe(dest('target/images/'))
     .pipe(gulp.dest('./'));
    gulp.src(['src/projects/**.*'])
