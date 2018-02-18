@@ -38,6 +38,9 @@ gulp.task('copy', ['clean'], function() {
    gulp.src(['src/projects/**.*'])
     .pipe(dest('target/projects/'))
     .pipe(gulp.dest('./'));
+    gulp.src(['src/js/**.*'])
+     .pipe(dest('target/js/'))
+     .pipe(gulp.dest('./'));
 });
 
 
