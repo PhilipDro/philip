@@ -1,8 +1,10 @@
 
 $ ->
+  # initialize bricklayer for image layout
   if $('.bricklayer').length > 0
     bricklayer = new Bricklayer(document.querySelector('.bricklayer'))
 
+  # get current year
   currentYear = new Date().getFullYear()
   $('#copyright').append(currentYear)
 
@@ -20,3 +22,11 @@ $ ->
       }, 200, ->
         window.location.hash = hash)
       )
+
+  # initialize lazy load lozad
+  observer = lozad('.lozad', {
+    load: (el) ->
+      el.src = el.dataset.src
+      el.onload = ->
+        el.classList.add('fade')
+  }).observe()

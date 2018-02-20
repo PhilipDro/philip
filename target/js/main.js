@@ -1,12 +1,14 @@
 $(function() {
-  var bricklayer, currentYear;
+  var bricklayer, currentYear, observer;
+  // initialize bricklayer for image layout
   if ($('.bricklayer').length > 0) {
     bricklayer = new Bricklayer(document.querySelector('.bricklayer'));
   }
+  // get current year
   currentYear = new Date().getFullYear();
   $('#copyright').append(currentYear);
   // Add smooth scrolling to all links
-  return $("a").on('click', function(event) {
+  $("a").on('click', function(event) {
     var hash;
     if (this.hash !== "") {
       event.preventDefault();
@@ -19,4 +21,13 @@ $(function() {
       });
     }
   });
+  // initialize lazy load lozad
+  return observer = lozad('.lozad', {
+    load: function(el) {
+      el.src = el.dataset.src;
+      return el.onload = function() {
+        return el.classList.add('fade');
+      };
+    }
+  }).observe();
 });

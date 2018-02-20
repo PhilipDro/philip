@@ -23,7 +23,15 @@
 //
 // });
 
-
+// // Initialize library
+// lozad('.lozad', {
+//     load: function(el) {
+//         el.src = el.dataset.src;
+//         el.onload = function() {
+//             el.classList.add('fade')
+//         }
+//     }
+// }).observe()
 //
 // $.post( "https://api.pinterest.com/v1/boards/466967123802407218/pins/?access_token=ATQFtAAWMrhBvoEsp8uJw7F3mSBPFRSPEePMcc9Etvpvk4A3VgAAAAA&fields=id%2Clink%2Cnote%2Curl%2Cimage", function( data ) {
 //   console.log( "Data Loaded: " + data );

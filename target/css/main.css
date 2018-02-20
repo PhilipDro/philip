@@ -10,6 +10,16 @@
     /* divide by 2. */
     width: 50%; } }
 
+.fade {
+  animation-name: fade;
+  animation-duration: 2s; }
+
+@keyframes fade {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -182,20 +192,54 @@ nav ul {
       nav ul li a.active {
         text-decoration: underline; }
 
-.project-section::after {
-  clear: both;
-  content: "";
-  display: block; }
-
-.project-section article {
-  margin-top: 7vh;
-  margin-bottom: 7vh; }
-  @media (max-width: 420px) {
-    .project-section article {
-      margin: 0; } }
-
-.project-section img {
-  border: 1px solid #ebebeb; }
+.project-section {
+  cursor: pointer; }
+  .project-section::after {
+    clear: both;
+    content: "";
+    display: block; }
+  .project-section.shelf-section {
+    background: transparent;
+    -webkit-transition: background .5s;
+    transition: background .5s; }
+    .project-section.shelf-section:hover {
+      background: #fff4b5; }
+      .project-section.shelf-section:hover article.shelf {
+        background: transparent;
+        -webkit-transition: background .5s;
+        transition: background .5s; }
+  .project-section.euro-section {
+    background: transparent;
+    -webkit-transition: background .5s;
+    transition: background .5s; }
+    .project-section.euro-section:hover {
+      background: #b1e0c2; }
+      .project-section.euro-section:hover article.euro {
+        background: transparent;
+        -webkit-transition: background .5s;
+        transition: background .5s; }
+  .project-section.golem-section {
+    background: transparent;
+    -webkit-transition: background .5s;
+    transition: background .5s; }
+    .project-section.golem-section:hover {
+      background: #a098cb; }
+      .project-section.golem-section:hover article.golem {
+        background: transparent;
+        -webkit-transition: background .5s;
+        transition: background .5s; }
+  .project-section article {
+    margin-top: 7vh;
+    margin-bottom: 7vh; }
+    @media (max-width: 420px) {
+      .project-section article {
+        margin: 0; } }
+    .project-section article.shelf {
+      background: #fff4b5; }
+    .project-section article.euro {
+      background: #b1e0c2; }
+    .project-section article.golem {
+      background: #a098cb; }
 
 footer.container {
   margin-top: 10vh; }
