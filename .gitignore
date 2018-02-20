@@ -57,3 +57,6 @@ typings/
 # dotenv environment variables file
 .env
 
+# videos
+src/assets/videos
+target/assets/videos

@@ -203,3 +203,5 @@ footer.container {
     padding-left: 0; }
     footer.container ul li {
       list-style-type: none; }
+  footer.container #copyright {
+    font-size: .85em; }

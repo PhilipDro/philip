@@ -18,8 +18,8 @@ gulp.task('coffee', ['sass'], function() {
 });
 
 gulp.task('clean', function () {
-    return gulp.src('target/', {read: false})
-        .pipe(clean());
+  return gulp.src('target/', {read: false})
+  .pipe(clean());
 });
 
 gulp.task('concat', ['coffee'], function() {
@@ -29,21 +29,25 @@ gulp.task('concat', ['coffee'], function() {
 });
 
 gulp.task('copy', ['clean'], function() {
+  // copy src data
   gulp.src(['src/**.*'])
    .pipe(dest('target/'))
    .pipe(gulp.dest('./'));
-   gulp.src(['src/images/**/**.*'])
-    .pipe(dest('target/images/'))
-    .pipe(gulp.dest('./'));
-   gulp.src(['src/projects/**.*'])
-    .pipe(dest('target/projects/'))
-    .pipe(gulp.dest('./'));
-    gulp.src(['src/js/**.*'])
-     .pipe(dest('target/js/'))
-     .pipe(gulp.dest('./'));
+  // copy images
+  gulp.src(['src/assets/**/**.*'])
+  .pipe(dest('target/assets/'))
+  .pipe(gulp.dest('./'));
+  // copy projects files
+  gulp.src(['src/projects/**.*'])
+  .pipe(dest('target/projects/'))
+  .pipe(gulp.dest('./'));
+  // copy js files
+  gulp.src(['src/js/**.*'])
+   .pipe(dest('target/js/'))
+   .pipe(gulp.dest('./'));
 });
 
 
-gulp.task('default', ['sass', 'coffee', 'concat'], function() {
+gulp.task('default', ['concat'], function() {
   gulp.watch('./src/**/*.*', ['copy', 'concat']);
 });
