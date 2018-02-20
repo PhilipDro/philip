@@ -150,6 +150,8 @@ header {
 .img-smaller {
   width: 75%;
   border: 1px solid #c0cdd1; }
+  .img-smaller.no-border {
+    border: none; }
 
 .half-width-text {
   width: 40vw;
@@ -165,6 +167,9 @@ header {
   margin: 2vw; }
   .images-in-row img.big {
     width: 64vw; }
+  .images-in-row img.small {
+    width: 20vw;
+    margin: .6vw; }
 
 .images-in-row-full-height img {
   display: inline-block;
@@ -244,8 +249,12 @@ nav ul {
 footer.container {
   margin-top: 10vh; }
   footer.container ul {
-    padding-left: 0; }
+    padding-left: 0;
+    display: inline-block; }
     footer.container ul li {
       list-style-type: none; }
   footer.container #copyright {
     font-size: .85em; }
+  footer.container .go-up {
+    float: right;
+    margin-top: 10vh; }

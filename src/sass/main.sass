@@ -118,6 +118,8 @@ header
 .img-smaller
   width: 75%
   border: 1px solid darken($clouds, 20%)
+  &.no-border
+    border: none
 .half-width-text
   width: 40vw
   line-height: 1.4em
@@ -131,6 +133,9 @@ header
     margin: 2vw
     &.big
       width: 64vw
+    &.small
+      width: 20vw
+      margin: .6vw
 .images-in-row-full-height
   img
     display: inline-block
@@ -213,9 +218,13 @@ footer.container
   margin-top: 10vh
   ul
     padding-left: 0
+    display: inline-block
     li
       list-style-type: none
       a
         // text-transform: uppercase
   #copyright
     font-size: .85em
+  .go-up
+    float: right
+    margin-top: 10vh
