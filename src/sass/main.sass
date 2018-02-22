@@ -16,6 +16,10 @@ h2
   margin-top: 2em
   // to comply with neat column
   // margin-left: 20px
+h3
+  font-size: 1.6em
+  margin-bottom: 0.2em
+  // font-weight: normal
 a
   text-decoration: none
   color: $text-color
@@ -66,8 +70,12 @@ img
     transition: border .4s, color .4s
 .offset
   margin-left: 20px
+  @media(max-width: $smartphone-max)
+    margin-left: 0
 .greyed
   color: lighten($text-color, 20%)
+.margin
+  margin: 2vw
 
 
 // header
@@ -77,6 +85,7 @@ header
   border-bottom: 1px solid darken($clouds, 10%)
   position: relative
   margin-bottom: 10vh
+  // @include grid-container
   &.home
     margin-bottom: 0
   .header-col
@@ -145,8 +154,26 @@ header
     margin: 2vw
     &.big
       width: 64vw
-.margin
-  margin: 2vw
+    @media(max-width: $smartphone-max)
+      width: 100%
+      height: auto
+      &.big
+        width: 100%
+        height: auto
+.inspiration-header
+  overflow: hidden
+  width: 48vw
+  height: 100vh
+  float: right
+  display: inline-block
+  @media(max-width: $smartphone-max)
+    width: 100vw
+  img
+    width: 100%
+    height: auto
+    overflow: hidden
+
+
 // navigation
 nav
   ul

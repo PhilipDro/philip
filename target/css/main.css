@@ -34,6 +34,10 @@ a {
 h2 {
   margin-top: 2em; }
 
+h3 {
+  font-size: 1.6em;
+  margin-bottom: 0.2em; }
+
 a {
   text-decoration: none;
   color: #383838; }
@@ -95,9 +99,15 @@ img {
 
 .offset {
   margin-left: 20px; }
+  @media (max-width: 420px) {
+    .offset {
+      margin-left: 0; } }
 
 .greyed {
   color: #6b6b6b; }
+
+.margin {
+  margin: 2vw; }
 
 header {
   height: 100vh;
@@ -179,9 +189,27 @@ header {
   margin: 2vw; }
   .images-in-row-full-height img.big {
     width: 64vw; }
+  @media (max-width: 420px) {
+    .images-in-row-full-height img {
+      width: 100%;
+      height: auto; }
+      .images-in-row-full-height img.big {
+        width: 100%;
+        height: auto; } }
 
-.margin {
-  margin: 2vw; }
+.inspiration-header {
+  overflow: hidden;
+  width: 48vw;
+  height: 100vh;
+  float: right;
+  display: inline-block; }
+  @media (max-width: 420px) {
+    .inspiration-header {
+      width: 100vw; } }
+  .inspiration-header img {
+    width: 100%;
+    height: auto;
+    overflow: hidden; }
 
 nav ul {
   padding: 0; }

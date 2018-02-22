@@ -8,27 +8,116 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <header class="home">
+  <header>
     <article class="header-col">
       <div class="container">
         <nav>
           <ul>
-            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="tinker.html">Tinker</a></li>
-            <li><a href="#">Inspiration</a></li>
+            <li><a class="active" href="inspiration.html">Inspiration</a></li>
           </ul>
         </nav>
         <div class="heading-box">
           <h1 class="heading">Inspiration</h1>
-          <p class="subheading">Web developer living in Berlin.</p>
+          <p class="subheading">Visual inspiration for UI/UX.</p>
         </div>
-        <a class="button-header" href="#main">Take a look</a>
+        <a class="button-header" href="#main">Explore</a>
       </div>
     </article>
-    <article class="header-image home">
+    <article class="inspiration-header">
+      <img src="assets/images/inspiration/inspiration-header.jpg" src="colorful marble" />
     </article>
   </header>
   <main class="container" id="main">
+    <div class="bricklayer">
+      <div>
+        <a href="#">
+          <img class="lozad" data-src="assets/images/inspiration/1.jpg" alt="image" />
+        </a>
+      </div>
+      <div>
+        <a href="https://dribbble.com/shots/3339155-Music-App" target="blank">
+          <img class="lozad" data-src="assets/images/inspiration/2.jpg" alt="image" />
+        </a>
+      </div>
+      <div>
+        <a href="https://dribbble.com/shots/4147266-iPhone-X-UI-Dashboard" target="blank">
+          <img class="lozad" data-src="assets/images/inspiration/3.jpg" alt="image" />
+        </a>
+      </div>
+      <div>
+        <a href="https://brasil.uxdesign.cc/minimalismo-na-ux-309cd4cfee6f" target="blank">
+          <img class="lozad" data-src="assets/images/inspiration/4.jpg" alt="image" />
+        </a>
+      </div>
+      <div>
+        <a href="https://dribbble.com/shots/4093901-Team-Onboard-Dashboard/attachments/938450" target="blank">
+          <img class="lozad" data-src="assets/images/inspiration/5.jpg" alt="image" />
+        </a>
+      </div>
+      <div>
+        <a href="https://dribbble.com/shots/3499038-Good-design-is-obvious-Great-design-is-transparent/attachments/773326" target="blank">
+          <img class="lozad" data-src="assets/images/inspiration/6.jpg" alt="image" />
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img class="lozad" data-src="assets/images/inspiration/7.jpg" alt="image" />
+        </a>
+      </div>
+      <div>
+        <a href="https://dribbble.com/shots/3528140-Design-is-an-opportunity-to-continue-telling-the-story/attachments/782607" target="blank">
+          <img class="lozad" data-src="assets/images/inspiration/8.jpg" alt="image" />
+        </a>
+      </div>
+      <div>
+        <a href="https://dribbble.com/shots/2828758-payment-ui?1468190203" target="blank">
+          <img class="lozad" data-src="assets/images/inspiration/9.jpg" alt="image" />
+        </a>
+      </div>
+      <div>
+        <a href="https://www.behance.net/gallery/37093523/UI-Experiments" target="blank">
+          <img class="lozad" data-src="assets/images/inspiration/10.jpg" alt="image" />
+        </a>
+      </div>
+      <div>
+        <a href="https://pinthemall.net/pin/58e7cbc7429e0/" target="blank">
+          <img class="lozad" data-src="assets/images/inspiration/11.jpg" alt="image" />
+        </a>
+      </div>
+      <div>
+        <a href="https://www.pinterest.de/pin/466967055104030557/" target="blank">
+          <img class="lozad" data-src="assets/images/inspiration/12.jpg" alt="image" />
+        </a>
+      </div>
+      <div>
+        <a href="https://dribbble.com/shots/3039665-Weather-UI-Concept" target="blank">
+          <img class="lozad" data-src="assets/images/inspiration/13.jpg" alt="image" />
+        </a>
+      </div>
+      <div>
+        <a href="https://dribbble.com/shots/3552335-Desktop-Tablet-Exploration/attachments/790146" target="blank">
+          <img class="lozad" data-src="assets/images/inspiration/14.jpg" alt="image" />
+        </a>
+      </div>
+      <div>
+        <a href="http://payload353.cargocollective.com/1/17/559552/9379013/S-AE_website_home1_1200.jpg" target="blank">
+          <img class="lozad" data-src="assets/images/inspiration/15.jpg" alt="image" />
+        </a>
+      </div>
+      <div>
+        <a href="#">
+          <img class="lozad" data-src="assets/images/inspiration/16.jpg" alt="image" />
+        </a>
+      </div>
+      <div>
+        <a href="https://www.behance.net/gallery/44790967/Rendered-a-responsive-demo-website-for-Adobe" target="blank">
+          <img class="lozad" data-src="assets/images/inspiration/17.jpg" alt="image" />
+        </a>
+      </div>
+
+    </div>
   </main>
   <footer class="container">
     <ul>
@@ -38,27 +127,9 @@
     </ul>
     <p id="copyright">All rights are reserved </p>
   </footer>
+  <script src="https://cdn.jsdelivr.net/npm/lozad"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bricklayer/0.4.2/bricklayer.min.js"></script>
-  <script src="js/pinterest-sdk.js"></script>
   <script src="js/main.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-  <script>
-    window.pAsyncInit = function() {
-        PDK.init({
-            appId: "4951411288958845088",
-            cookie: true
-        });
-    };
-
-    (function(d, s, id){
-        var js, pjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) {return;}
-        js = d.createElement(s); js.id = id;
-        js.src = "https://assets.pinterest.com/sdk/sdk.js";
-        pjs.parentNode.insertBefore(js, pjs);
-    }(document, 'script', 'pinterest-jssdk'));
-  </script>
-  <script src="js/test.js"></script>
-</body>
 </html>
