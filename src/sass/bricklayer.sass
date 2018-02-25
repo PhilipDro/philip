@@ -1,18 +1,21 @@
 // bricklayer
+
 .bricklayer
   div
-    margin: 0vw 1vw 4vw 8px
+    margin: 0vw 1vw 8vh 8px
+    @media (max-width: $smartphone-max)
+      margin-bottom: 6vh
   video
     width: 100%
     height: auto
+  @media (max-width: $smartphone-max)
+    width: 330px !important
 
 @media screen and (min-width: 768px)
   .bricklayer-column-sizer
     /* divide by 2. */
     width: 50%
 
-
-// @media screen and (min-width: 400px)
-//   .bricklayer-column-sizer
-//     /* divide by 3. */
-//     width: 33.3%
+@media screen and (max-width: $smartphone-max)
+  .bricklayer-column-sizer
+    width: 100%

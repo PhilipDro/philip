@@ -1,14 +1,25 @@
 .bricklayer div {
-  margin: 0vw 1vw 4vw 8px; }
+  margin: 0vw 1vw 8vh 8px; }
+  @media (max-width: 420px) {
+    .bricklayer div {
+      margin-bottom: 6vh; } }
 
 .bricklayer video {
   width: 100%;
   height: auto; }
 
+@media (max-width: 420px) {
+  .bricklayer {
+    width: 330px !important; } }
+
 @media screen and (min-width: 768px) {
   .bricklayer-column-sizer {
     /* divide by 2. */
     width: 50%; } }
+
+@media screen and (max-width: 420px) {
+  .bricklayer-column-sizer {
+    width: 100%; } }
 
 .fade {
   animation-name: fade;
@@ -82,6 +93,10 @@ img {
     color: #9b59b6;
     border: 2px solid #9b59b6;
     transition: border .4s, color .4s; }
+  @media (max-width: 420px) {
+    .button, .button-header {
+      margin-top: 0;
+      margin-bottom: 4vh; } }
 
 .button-header {
   margin-top: 0;
@@ -99,7 +114,7 @@ img {
 
 .offset {
   margin-left: 20px; }
-  @media (max-width: 420px) {
+  @media (max-width: 768px) {
     .offset {
       margin-left: 0; } }
 
@@ -115,6 +130,14 @@ header {
   border-bottom: 1px solid #dde4e6;
   position: relative;
   margin-bottom: 10vh; }
+  @media (max-width: 420px) {
+    header.project {
+      height: auto; }
+      header.project .heading-box {
+        padding: 2vh 0 4vh 0;
+        margin-top: 0; }
+      header.project .header-col {
+        height: auto; } }
   header.home {
     margin-bottom: 0; }
   header .header-col {
@@ -146,13 +169,32 @@ header {
     display: inline-block; }
     @media (max-width: 420px) {
       header .header-image {
-        width: 100vw; } }
+        display: none; } }
     header .header-image.home {
-      background: #95a5a6; }
+      background: #95a5a6;
+      overflow: hidden; }
+      header .header-image.home img {
+        width: 100%;
+        height: auto;
+        margin-top: -100px; }
     header .header-image img {
       float: right;
       height: 100%;
       width: auto; }
+
+.inspiration-header {
+  overflow: hidden;
+  width: 48vw;
+  height: 100vh;
+  float: right;
+  display: inline-block; }
+  @media (max-width: 420px) {
+    .inspiration-header {
+      display: none; } }
+  .inspiration-header img {
+    width: 100%;
+    height: auto;
+    overflow: hidden; }
 
 .center-content {
   text-align: center; }
@@ -168,18 +210,27 @@ header {
   line-height: 1.4em; }
   @media (max-width: 420px) {
     .half-width-text {
-      width: 100vw; } }
+      width: 100%; } }
 
 .images-in-row img {
   display: inline-block;
   width: 30vw;
   border: 1px solid #c0cdd1;
   margin: 2vw; }
+  @media (max-width: 420px) {
+    .images-in-row img {
+      width: 90%; } }
   .images-in-row img.big {
     width: 64vw; }
+    @media (max-width: 420px) {
+      .images-in-row img.big {
+        width: 100%; } }
   .images-in-row img.small {
     width: 20vw;
     margin: .6vw; }
+    @media (max-width: 420px) {
+      .images-in-row img.small {
+        width: 100%; } }
 
 .images-in-row-full-height img {
   display: inline-block;
@@ -191,25 +242,11 @@ header {
     width: 64vw; }
   @media (max-width: 420px) {
     .images-in-row-full-height img {
-      width: 100%;
+      width: 90%;
       height: auto; }
       .images-in-row-full-height img.big {
         width: 100%;
         height: auto; } }
-
-.inspiration-header {
-  overflow: hidden;
-  width: 48vw;
-  height: 100vh;
-  float: right;
-  display: inline-block; }
-  @media (max-width: 420px) {
-    .inspiration-header {
-      width: 100vw; } }
-  .inspiration-header img {
-    width: 100%;
-    height: auto;
-    overflow: hidden; }
 
 nav ul {
   padding: 0; }
@@ -217,6 +254,8 @@ nav ul {
     list-style-type: none;
     display: inline;
     padding: 0 .5em; }
+    nav ul li:first-child {
+      padding-left: 0; }
     nav ul li a {
       text-transform: uppercase;
       text-decoration: none;
@@ -226,7 +265,8 @@ nav ul {
         text-decoration: underline; }
 
 .project-section {
-  cursor: pointer; }
+  cursor: pointer;
+  margin: 3vh auto; }
   .project-section::after {
     clear: both;
     content: "";
@@ -264,6 +304,9 @@ nav ul {
   .project-section article {
     margin-top: 7vh;
     margin-bottom: 7vh; }
+    @media (max-width: 768px) {
+      .project-section article {
+        margin: 0; } }
     @media (max-width: 420px) {
       .project-section article {
         margin: 0; } }

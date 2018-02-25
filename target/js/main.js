@@ -22,12 +22,14 @@ $(function() {
     }
   });
   // initialize lazy load lozad
-  return observer = lozad('.lozad', {
-    load: function(el) {
-      el.src = el.dataset.src;
-      return el.onload = function() {
-        return el.classList.add('fade');
-      };
-    }
-  }).observe();
+  if ($('.lozad').length > 0) {
+    return observer = lozad('.lozad', {
+      load: function(el) {
+        el.src = el.dataset.src;
+        return el.onload = function() {
+          return el.classList.add('fade');
+        };
+      }
+    }).observe();
+  }
 });

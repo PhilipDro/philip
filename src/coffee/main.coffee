@@ -24,9 +24,10 @@ $ ->
       )
 
   # initialize lazy load lozad
-  observer = lozad('.lozad', {
-    load: (el) ->
-      el.src = el.dataset.src
-      el.onload = ->
-        el.classList.add('fade')
-  }).observe()
+  if $('.lozad').length > 0
+    observer = lozad('.lozad', {
+      load: (el) ->
+        el.src = el.dataset.src
+        el.onload = ->
+          el.classList.add('fade')
+    }).observe()
