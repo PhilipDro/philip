@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <header class="project">
+  <header id="top" class="project">
     <article class="header-col">
       <div class="container">
         <nav>
@@ -27,8 +27,7 @@
         </div>
       </div>
     </article>
-    <article class="header-image">
-      <img src="../assets/images/golem/golem-article-long.jpg" alt="screenshot of golem redesign" />
+    <article class="header-image header-golem">
     </article>
   </header>
   <main class="container">
@@ -39,7 +38,7 @@
         There is no clear visual hierarchy, the navigation got more and more complex and the brand "Golem" is not prominent enough.
       </p>
       <article class="center-content">
-        <img src="../assets/images/golem/golem-old.png" class="img-smaller no-border" alt="current golem design"/>
+        <img class="lozad img-smaller no-border" data-src="../assets/images/golem/golem-old.png" alt="current golem design"/>
       </article>
     </section>
 
@@ -53,9 +52,9 @@
         Additionally in order to wrap my head around the complex data infrastructure I mapped the information architecture.
       </p>
       <article class="images-in-row center-content">
-        <img src="../assets/images/golem/golem-styleguide.jpg" alt="golem styleguide" />
-        <img src="../assets/images/golem/quarz-styleguide.jpg" alt="qz styleguide" />
-        <img class="big" src="../assets/images/golem/information-architecture.jpg" alt="information architecture" />
+        <img class="lozad" data-src="../assets/images/golem/golem-styleguide.jpg" alt="golem styleguide" />
+        <img class="lozad" data-src="../assets/images/golem/quarz-styleguide.jpg" alt="qz styleguide" />
+        <img class="big lozad" data-src="../assets/images/golem/information-architecture.jpg" alt="information architecture" />
       </article>
     </section>
 
@@ -66,8 +65,8 @@
         Advertisement and other services are bound to contextually relevant articles and the news feed is multi medial and less categorized.
       </p>
       <article class="images-in-row center-content">
-        <img src="../assets/images/golem/wireframe-home.jpg" alt="golem wireframe home" />
-        <img src="../assets/images/golem/wireframe-article.jpg" alt="golem wireframe article" />
+        <img class="lozad" data-src="../assets/images/golem/wireframe-home.jpg" alt="golem wireframe home" />
+        <img class="lozad" data-src="../assets/images/golem/wireframe-article.jpg" alt="golem wireframe article" />
       </article>
     </section>
 
@@ -77,8 +76,8 @@
         After I finished creating the screendesigns I started developing using HTML, CSS and Javascript.
       </p>
       <article class="images-in-row center-content">
-        <img src="../assets/images/golem/golem-home.jpg" alt="golem home" />
-        <img src="../assets/images/golem/golem-article.jpg" alt="golem article" />
+        <img class="lozad" data-src="../assets/images/golem/golem-home.jpg" alt="golem home" />
+        <img class="lozad" data-src="../assets/images/golem/golem-article.jpg" alt="golem article" />
       </article>
     </section>
 
@@ -98,8 +97,19 @@
     </section>
 
   </main>
-
-  <script type="text/javascript" href="js/scripts.js"></script>
+  <footer class="container">
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./tinker.html">Tinker</a></li>
+      <li><a href="./inspiration.html">Inspiration</a></li>
+      <li><a class="greyed" href="mailto:me@philipdrozd.com">Get in touch</a></li>
+    </ul>
+    <a class="go-up" href="#top"><i class="fas fa-3x fa-chevron-up"></i></a>
+    <p id="copyright">All rights are reserved </p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/lozad"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bricklayer/0.4.2/bricklayer.min.js"></script>
+  <script src="../js/main.js"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-</body>
 </html>

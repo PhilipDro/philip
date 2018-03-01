@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-  <header>
+  <header id="top">
     <article class="header-col">
       <div class="container">
         <nav>
@@ -25,8 +25,7 @@
         <a class="button-header" href="#main">Check it out</a>
       </div>
     </article>
-    <article class="header-image">
-      <img src="assets/images/tinker/header.jpg" alt="picture of a pill on a tongue" />
+    <article class="header-image tinker">
     </article>
   </header>
   <main class="container" id="main">
@@ -54,16 +53,24 @@
         <img class="lozad" data-src="assets/images/tinker/glass.jpg" alt="image" />
         <p>Glass, CGI, 2018</p>
       </div>
-      <div>
+      <!-- <div>
         <img class="lozad" data-src="assets/images/tinker/kompo.jpg" alt="image" />
+        <p>Glass composition, CGI, 2018</p>
+      </div> -->
+      <div>
+        <img class="lozad" data-src="assets/images/tinker/bottle.jpg" alt="image" />
         <p>Glass composition, CGI, 2018</p>
       </div>
       <div>
-        <video width="100%" controls>
+        <!-- <video width="100%" controls>
           <source src="assets/videos/coup.mp4" type="video/mp4">
           Your browser does not support HTML5 video.
-        </video>
-        <p>Advertisement clip for electric motorscooter sharing 'Coup', 2017</p>
+        </video> -->
+        <iframe class="lozad" width="100%" height="360px"
+        data-src="https://www.youtube.com/embed/NeF-MUHxlEM">
+        </iframe>
+
+        <p>Advertisement clip for electric motor scooter sharing 'Coup', 2017</p>
       </div>
       <div>
         <img class="lozad" data-src="assets/images/tinker/sideboard.jpg" alt="image" />
@@ -118,10 +125,10 @@
         <img class="lozad" data-src="assets/images/tinker/garage.jpg" alt="image" />
         <p>Experimental photography using a projector, 2016</p>
       </div>
-      <div>
+      <!-- <div>
         <img class="lozad" data-src="assets/images/tinker/church.jpg" alt="image" />
         <p>Experimental photography using a projector, 2016</p>
-      </div>
+      </div> -->
       <div>
         <img class="lozad" data-src="assets/images/tinker/t3.jpg" alt="image" />
       </div>
@@ -132,16 +139,18 @@
         <img class="lozad" data-src="assets/images/tinker/t5.jpg" alt="image" />
       </div>
     </div>
-
   </main>
   <footer class="container">
     <ul>
       <li><a href="./index.html">Home</a></li>
       <li><a href="./tinker.html">Tinker</a></li>
+      <li><a href="./inspiration.html">Inspiration</a></li>
       <li><a class="greyed" href="mailto:me@philipdrozd.com">Get in touch</a></li>
     </ul>
+    <a class="go-up" href="#top"><i class="fas fa-3x fa-chevron-up"></i></a>
     <p id="copyright">All rights are reserved </p>
   </footer>
+
   <script src="https://cdn.jsdelivr.net/npm/lozad"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bricklayer/0.4.2/bricklayer.min.js"></script>

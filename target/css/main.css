@@ -59,6 +59,10 @@ img {
 
 .container {
   margin: 0 4vw; }
+  .container::after {
+    clear: both;
+    content: "";
+    display: block; }
 
 .col {
   width: calc(50% - 30px);
@@ -111,6 +115,9 @@ img {
     color: #9b59b6;
     border: 4px solid #9b59b6;
     transition: border .4s, color .4s; }
+
+.highlight {
+  color: #6255a8; }
 
 .offset {
   margin-left: 20px; }
@@ -171,30 +178,26 @@ header {
       header .header-image {
         display: none; } }
     header .header-image.home {
-      background: #95a5a6;
-      overflow: hidden; }
-      header .header-image.home img {
-        width: 100%;
-        height: auto;
-        margin-top: -100px; }
-    header .header-image img {
-      float: right;
-      height: 100%;
-      width: auto; }
-
-.inspiration-header {
-  overflow: hidden;
-  width: 48vw;
-  height: 100vh;
-  float: right;
-  display: inline-block; }
-  @media (max-width: 420px) {
-    .inspiration-header {
-      display: none; } }
-  .inspiration-header img {
-    width: 100%;
-    height: auto;
-    overflow: hidden; }
+      background-image: url("../assets/images/header-img.jpg");
+      background-size: cover;
+      background-position: center; }
+    header .header-image.tinker {
+      background-image: url("../assets/images/tinker/header.jpg");
+      background-size: cover;
+      background-position: center; }
+    header .header-image.inspiration {
+      background-image: url("../assets/images/inspiration/inspiration-header.jpg");
+      background-size: cover;
+      background-position: center; }
+    header .header-image.header-euro {
+      background-image: url("../assets/images/euro/euro-full-tech.jpg");
+      background-size: cover; }
+    header .header-image.header-golem {
+      background-image: url("../assets/images/golem/golem-article-long.jpg");
+      background-size: cover; }
+    header .header-image.header-shelf {
+      background-image: url("../assets/images/shelf/massregal-home-long.jpg");
+      background-size: cover; }
 
 .center-content {
   text-align: center; }
@@ -257,7 +260,6 @@ nav ul {
     nav ul li:first-child {
       padding-left: 0; }
     nav ul li a {
-      text-transform: uppercase;
       text-decoration: none;
       color: #383838;
       font-size: 0.9em; }
