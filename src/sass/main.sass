@@ -1,4 +1,5 @@
 @import "neat/neat"
+
 @import "variables"
 @import "bricklayer"
 @import "lozad"
@@ -58,6 +59,7 @@ img
   @media(max-width: $smartphone-max)
     margin-top: 0
     margin-bottom: 4vh
+
 .button-header
   @extend .button
   margin-top: 0
@@ -68,6 +70,10 @@ img
   padding: 0.8em 1.2em
   font-size: 1.4em
   font-weight: bold
+  @media(max-width: $smartphone-max)
+    left: 50%
+    transform: translateX(-50%)
+    text-align: center
   &:hover
     color: #9b59b6
     border: 4px solid #9b59b6
