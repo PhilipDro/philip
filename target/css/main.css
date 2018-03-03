@@ -44,6 +44,10 @@ a {
 
 h2 {
   margin-top: 2em; }
+  h2.big {
+    font-size: 4em;
+    line-height: auto;
+    margin-top: 1vh; }
 
 h3 {
   font-size: 1.6em;
@@ -72,7 +76,8 @@ img {
     .col {
       width: calc(100% - 40px);
       float: left;
-      margin-left: 20px; } }
+      margin-left: 20px;
+      margin-bottom: 5vh; } }
   .col p {
     line-height: 1.4em; }
 
@@ -110,19 +115,21 @@ img {
   border: 4px solid #383838;
   padding: 0.8em 1.2em;
   font-size: 1.4em;
+  display: inline;
   font-weight: bold; }
   @media (max-width: 420px) {
     .button-header {
       left: 50%;
       transform: translateX(-50%);
-      text-align: center; } }
+      text-align: center;
+      bottom: 4vh; } }
   .button-header:hover {
     color: #9b59b6;
     border: 4px solid #9b59b6;
     transition: border .4s, color .4s; }
 
 .highlight {
-  color: #6255a8; }
+  color: #e5077a; }
 
 .offset {
   margin-left: 20px; }
@@ -136,8 +143,10 @@ img {
 .margin {
   margin: 2vw; }
 
+.margin-top {
+  margin-top: 2vh; }
+
 header {
-  height: 100vh;
   background: #fbfcfc;
   border-bottom: 1px solid #dde4e6;
   position: relative;
@@ -152,6 +161,12 @@ header {
         height: auto; } }
   header.home {
     margin-bottom: 0; }
+  header.blog .header-col {
+    height: auto; }
+    header.blog .header-col .heading-box {
+      margin-top: 10vh; }
+      header.blog .header-col .heading-box h1 {
+        margin-bottom: 10vh; }
   header .header-col {
     width: 50vw;
     height: 100vh;
@@ -159,9 +174,13 @@ header {
     display: inline-block; }
     @media (max-width: 420px) {
       header .header-col {
-        width: 100vw; } }
+        width: 100vw;
+        height: 70vh; } }
   header .heading-box {
     margin-top: 20vh; }
+    @media (max-width: 420px) {
+      header .heading-box {
+        margin-top: 10vh; } }
   header .meta-info {
     margin-bottom: 0.4em; }
   header .heading {
@@ -181,7 +200,9 @@ header {
     display: inline-block; }
     @media (max-width: 420px) {
       header .header-image {
-        display: none; } }
+        max-height: 30vh;
+        width: 100vw;
+        margin-bottom: 5vh; } }
     header .header-image.home {
       background-image: url("../assets/images/header-img.jpg");
       background-size: cover;
@@ -328,11 +349,12 @@ footer.container {
   margin-top: 10vh; }
   footer.container ul {
     padding-left: 0;
-    display: inline-block; }
+    display: inline-block;
+    margin-bottom: 0; }
     footer.container ul li {
       list-style-type: none; }
   footer.container #copyright {
     font-size: .85em; }
   footer.container .go-up {
     float: right;
-    margin-top: 10vh; }
+    margin-top: 16vh; }

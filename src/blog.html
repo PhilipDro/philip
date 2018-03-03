@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Philip Drozd</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bricklayer/0.4.2/bricklayer.min.css">
+<link rel="stylesheet" type="text/css" href="css/main.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+</head>
+<body>
+  <header id="top" class="blog">
+    <article class="header-col">
+      <div class="container">
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="tinker.html">Tinker</a></li>
+            <li><a href="inspiration.html">Inspiration</a></li>
+            <li><a class="active" href="blog.html">Blog</a></li>
+          </ul>
+        </nav>
+        <div class="heading-box">
+          <h1 class="heading">Blog</h1>
+        </div>
+      </div>
+    </article>
+  </header>
+  <main class="container" id="main">
+    <h2 class="big">APIs and and the way ahead</h2>
+    <div class="half-width-text">
+      <h3>Structure</h3>
+        <ul>
+          <li>Definition</li>
+          <li>History</li>
+          <li>Requirements</li>
+          <li>Overview</li>
+          <li>Technology</li>
+          <li>Benefits</li>
+          <li>Future</li>
+        </ul>
+      <h3>Definition</h3>
+      <p>An API (Application Programming Interface) allows exchange of data and functionality between software components.
+          It differs from an ABI (application binary interface) in that data structures or computational routines are
+          not accessed in machine code but in source code. This makes an API more hardware-independent. </p>
+      <h3>History</h3>
+      <h4>1970-1980</h4>
+      <p>Communication between computers got more and more common at this time. The transport and the data handling
+          development which made it easier and faster. In 1976 the Remote Procedure Call got invented.
+          It is a technique for inter-process communication which is a mechanism from an operating system to allow the process
+          of managing shared data. These processes often used Interface Definition Language to make the procedure payloads and
+          the interactions more visible. Based on Message Oriented Middleware, which handles the passing and the queuing
+          of messages, new techniques got invented through connecting legacy mainframe systems which enabled addressing
+          Enterprise Application Integrations. One main system was the MQSeries from IBM. MQSeries solved a lot of the problems
+          distributed computing still faced at this time. For example it assured delivery of messages without any losses. </p>
+      <h4>1980-1990</h4>
+      <p>In early 1990 object-oriented programming became really popular because of the concept of an organized structure
+          for an application. This means splitting parts of an application into data and sets of procedures on that data
+          to put them into separate objects. In this concept of structuring the API is a class combined out of context,
+          behavior and identity of that object. Distributed systems spread even more through the rise and the commercializing
+          of the Web 2.0 which led to new and even better techniques for object oriented programming. These techniques built
+          upon the Remote Procedure Call model remotely allow the access to object instances. Open systems used Common Object
+          Request Broker Architecture (CORBA) and Microsoft DCOM for this procedures although both are based on Interface
+          Definition Languages to get  an interface contract between server and client. The results were independent transport
+          and data handling issues. The problem with this solution was that a similar middleware infrastructure was needed. </p>
+      <h4>1990-current</h4>
+      <p>Around 2000 most developers took advantage of the capabilities of HTTP and mark-ups like HTML, XML had to offer
+          for defining RPC calls. A counter current was transforming which tried a different approach to the existing
+          architectural style. The concept was a service-oriented direction and is named SOA (Service-Oriented Architecture).
+          Service-Oriented means service based development and the thinking of the services outcome.
+          Roy Fielding described the representational State Transfer (REST) architecture style in his dissertation.
+          He had also participated in the evolution of the world wide web and the Hyper Text Protocol also known as
+          HTTP which is still standard in version 1.1 today. The concept of resources and the access of information was
+          the original intent of the internet and the Tim Berners Lee defined the importance of the semantic web as we know it today. </p>
+      <h3>Requirements</h3>
+      <p>A good API enables the developer to put together the provided building blocks in order to achieve the desired functionality.
+          Usage for the programmer is facilitated by a clear documentation. By design an API should enable modular programming
+          by hiding complex details of the underlying architecture and only expose the necessary tools for the user. Likewise it is
+          expected to provide a high level of abstraction to be independent from the underlying technology, the protocols or the data. </p>
+      <h3>Overview</h3>
+      <p>While the divisions can be fluid one can differentiate APIs into three basic types. </p>
+      <p>
+        APIs can provide an interface to
+        communicate between an <strong>operating system</strong> and an application. POSIX (Portable Operating System Interface) for example
+        specifies a set of common APIs to maintain compatibility between different operating systems.
+      </p>
+      <p> Remote resources such
+        as databases can be modified using a <strong>remote API</strong>. Specific protocols allow interaction between different technologies.
+      </p>
+      <p>
+        <strong>Web APIs</strong> allow the client side of an application to communicate with a third-party service using HTTP to retrieve
+        functions and data. In web development this concept is used to create mashups by using multiple APIs to achieve the
+        desired application capability without the need to develop common functionality from scratch. This article will mainly
+        focus on Web APIs as their popularity is rapidly gaining relevance with the API economy growing.
+      </p>
+      <h3>Technology</h3>
+      <p>Recently the web and the cloud have significantly changed the circumstances and requirements for APIs. Today APIs need
+          to be able to communicate with clients regardless of the underlying architecture. </p>
+      <h4>SOAP</h4>
+      <p>Originally APIs have been used by applications using the SOAP(Simple Object Access Protocol). Clients were able
+          to access methods of a server-side object transferring complex XML data using HTTP. The advantage of this protocol
+          lies in its independence from programming languages and the platform used. Despite its advantages the SOAP still
+          has significant weaknesses. The XML messages mostly consist of meta data thus rendering the exchange of data inefficient.
+          Also assembling and disassembling them is expensive. Moreover with major tech enterprises developing their own SOAP standards
+          the increasing complexity became problematic. Those disadvantages gave rise to the REST model. </p>
+      <h4>REST</h4>
+      <p>The REpresentational State Transfer is an architecture providing interoperability between computer systems on the internet.
+          Information is returned in JSON or XML format simplifying further processing. Applications based on the REST architecture are
+          commonly realized using HTTP/S. Correspondingly HTTP methods such as GET, POST, PUT and DELETE will specify the type of the
+          performed operation. Services are invoked through URL/URI. </p>
+
+      <p>The REST architecture is based on six constraints:</p>
+      <h4>Client-Server</h4>
+      <p>A server offers capabilities and listens for requests. A client sends a request invoking a certain capability.
+          The server then proceeds to either reject the request or perform the requested task before sending a response message back to the client.
+          This is to enforce separation of concerns and make the two sides independent from each other also aiding in scalability. </p>
+      <h4>Stateless</h4>
+      <p>The communication between client and server has to be stateless. Every request by the client needs to contain all information
+          required by the server. Following that principle improves visibility and reliability of the information exchange. </p>
+      <h4>Caching</h4>
+      <p>Every request is passed through a cache component which evaluates if previous responses could be reused to improve performance.
+          Response messages need to be labeled either as cacheable or non-cacheable. </p>
+      <h4>Uniform Contract</h4>
+      <p>To frame information into a standardized format RESTful components use a single shared technical interface. This way the data does
+          not have to conform to specific application architectures. </p>
+      <h4>Layered System</h4>
+      <p>A RESTful application is supposed to be hierarchically structured in a layered system where no layer can see past the next.
+          Intermediaries which act as load balancers can improve scalability. Due to the restricted communication between layers latencies will occur. </p>
+      <h4>Code-On-Demand</h4>
+      <p>If server-side logic can be executed by the client more efficiently then a RESTful application can optionally utilize the principle of code-on-demand.
+          This allows the client to update capabilities independently from the server. </p>
+      <h3>There is an API for it!</h3>
+      <p>Many applications we know already have API’s. Instagram, Google Maps, Facebook you name it. Developers can use them to create something
+          completely new from given data to lending an application the last but final feature. The possibilities seem endless.
+          If you look for a specific feature or data you most likely will find an API for it. This brings so many possibilities
+          for every application in the building process. </p>
+      <h3>Benefits of owning an API</h3>
+      <p>API’s are of course something technical but there is a commercial side to it as well. Every company has its assets, you just have to find it.
+          As a business, giving an API free for usages can help developing your product faster and can grow your business immensely.
+          When a company is deciding of owning an API there are a few things to consider before taking this step. First of all you
+          always have to think of who your customers are and what API they might find useful. The API needs to be easy to use even
+          without a good documentation although a good documentation is key of saving a lot of time and money. </p>
+      <h3>Benefits of using an API</h3>
+      <p>API’s make things a lot easy when it comes to collecting data or have  specific functions for your application.
+          They enable apps to interact with each other and can enhance the user experience if done correctly.
+          A good API can spare you a lot of time as a developer. API’s get more and more popular and a lot of businesses
+          start running API’s for every problem you might run into while building your application. In a lot of cases they
+          can even make your app more popular or fasten certain processes your users have to go through for instance the
+          facebook API for logging in with your application. </p>
+      <h3>Future</h3>
+      <p>The situation so far around API’s is, that it is a still growing and changing one. More and more companies decide to get involved
+          in the market that has emerged and the ones that already have API’s start building more and more around them. Big businesses
+          hire entire teams just to keep the documentation in sync with the API. There are still some problems when it comes to
+          maintaining and using an API. For two machines to talk to each other we still need human beings to keep the API synced,
+          to watch after the versioning, to have an eye on the scaling and at least to discover the API and its documentations.
+          For that we need to hire more and more people to write more and more code. Which first sounds like a good solution because
+          it creates more jobs in the industry but when we take a closer look, it creates more room for mistakes. Once an API got
+          discovered we still need to figure out what it does, what we can use it for and how to use it. When we take this a step
+          further and ask the question how do we solve the problem of human resource in the process of using and maintaining an API.
+          Autonomous API’s. As Zdenek, also known as Z, published in his article about the future of API’s that the next step could be
+          eliminating the human role when it comes to machine talking. </p>
+
+      <p>He describes the workflow as following:</p>
+
+      <p> The machine has to expose its interface together with its vocabulary. This service then has to register in an API
+          discovery service to make sure it will be discovered by other machines. Later another program could search for that
+          service through the used vocabulary which needs to be standardized within the discovery service.
+          Of course we are still far from true machine to machine talking and some people are happy about it because the
+          human variable in this has some benefits as well. We humans can think creatively and are emotion driven
+          creatures and although it sometimes feels like a disadvantage it is our greatest asset. </p>
+      </div>
+      <p>written by <strong>Philip Drozd</strong> and <strong>Marie-Theres Monz</strong></p>
+  </main>
+  <footer class="container">
+    <ul>
+      <li><a href="./index.html">Home</a></li>
+      <li><a href="./tinker.html">Tinker</a></li>
+      <li><a href="./inspiration.html">Inspiration</a></li>
+      <li class="margin-top"><a class="greyed" href="assets/documents/resume.pdf" target="blank">Résumé</a></li>
+      <li><a class="greyed" href="mailto:me@philipdrozd.com">Get in touch</a></li>
+    </ul>
+    <a class="go-up" href="#top"><i class="fas fa-3x fa-chevron-up"></i></a>
+    <p id="copyright">All rights are reserved </p>
+  </footer>
+
+  <!-- polyfill lazy load -->
+  <!-- <script src="https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js"></script> -->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bricklayer/0.4.2/bricklayer.min.js"></script>
+  <script src="js/main.js"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+</body>
+</html>
