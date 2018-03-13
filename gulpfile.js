@@ -5,6 +5,16 @@ var coffee = require('gulp-coffee');
 var concat = require('gulp-concat');
 var clean = require('gulp-clean');
 var imagemin = require('gulp-imagemin');
+var autoprefixer = require('gulp-autoprefixer');
+
+gulp.task('autoprefixer', ['sass'], function() {
+  gulp.src('target/css/main.css')
+    .pipe(autoprefixer({
+        browsers: ['last 2 versions'],
+        cascade: false
+    }))
+    .pipe(gulp.dest('target/css/'))
+});
 
 gulp.task('sass', ['copy'], function () {
   return gulp.src('./src/sass/main.sass')
@@ -12,7 +22,7 @@ gulp.task('sass', ['copy'], function () {
     .pipe(gulp.dest('./target/css'));
 });
 
-gulp.task('coffee', ['sass'], function() {
+gulp.task('coffee', ['autoprefixer'], function() {
   gulp.src('./src/coffee/*.coffee')
     .pipe(coffee({bare: true}))
     .pipe(gulp.dest('./target/js/'));
@@ -36,6 +46,10 @@ gulp.task('imagemin', ['clean'], function () {
 });
 
 gulp.task('copy', ['imagemin'], function() {
+  // copy normalize.class
+  gulp.src(['node_modules/normalize.css/normalize.css'])
+  .pipe(dest('target/css/'))
+  .pipe(gulp.dest('./'));
   // copy src data
   gulp.src(['src/**.*'])
    .pipe(dest('target/'))

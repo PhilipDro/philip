@@ -22,8 +22,16 @@
     width: 100%; } }
 
 .fade {
+  -webkit-animation-name: fade;
   animation-name: fade;
+  -webkit-animation-duration: 2s;
   animation-duration: 2s; }
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 
 @keyframes fade {
   from {
@@ -104,6 +112,7 @@ img {
   .button:hover, .button-header:hover {
     color: #9b59b6;
     border: 2px solid #9b59b6;
+    -webkit-transition: border .4s, color .4s;
     transition: border .4s, color .4s; }
   @media (max-width: 420px) {
     .button, .button-header {
@@ -135,6 +144,7 @@ img {
   .button-header:hover {
     color: #9b59b6;
     border: 4px solid #9b59b6;
+    -webkit-transition: border .4s, color .4s;
     transition: border .4s, color .4s; }
 
 .highlight {
