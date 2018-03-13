@@ -6,7 +6,7 @@ $ ->
 
   # get current year
   currentYear = new Date().getFullYear()
-  $('#copyright').append(currentYear)
+  $('#copyright').append(' ' + currentYear)
 
   # Add smooth scrolling to all links
   $("a").on('click', (event) ->

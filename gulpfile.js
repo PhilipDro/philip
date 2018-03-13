@@ -6,9 +6,24 @@ var concat = require('gulp-concat');
 var clean = require('gulp-clean');
 var imagemin = require('gulp-imagemin');
 var autoprefixer = require('gulp-autoprefixer');
+var cleanCSS = require('gulp-clean-css');
+var htmlmin = require('gulp-htmlmin');
 
-gulp.task('autoprefixer', ['sass'], function() {
-  gulp.src('target/css/main.css')
+gulp.task('minify', ['copy'], function() {
+  return gulp.src('src/**/*.html')
+    .pipe(htmlmin({collapseWhitespace: true}))
+    .pipe(gulp.dest('target/'));
+});
+
+gulp.task('minify-css', ['sass'], function() {
+  return gulp.src('target/css/*.css')
+    .pipe(cleanCSS({debug: true}, (details) => {
+    }))
+    .pipe(gulp.dest('target/css/'));
+});
+
+gulp.task('autoprefixer', ['minify-css'], function() {
+  gulp.src('target/css/*.css')
     .pipe(autoprefixer({
         browsers: ['last 2 versions'],
         cascade: false
@@ -16,7 +31,7 @@ gulp.task('autoprefixer', ['sass'], function() {
     .pipe(gulp.dest('target/css/'))
 });
 
-gulp.task('sass', ['copy'], function () {
+gulp.task('sass', ['minify'], function () {
   return gulp.src('./src/sass/main.sass')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('./target/css'));
@@ -78,5 +93,5 @@ gulp.task('copy', ['imagemin'], function() {
 
 
 gulp.task('default', ['concat'], function() {
-  gulp.watch('./src/**/*.*', ['copy', 'concat']);
+  gulp.watch('./src/**/*.*', ['concat']);
 });
